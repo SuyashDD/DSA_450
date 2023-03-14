@@ -42,3 +42,21 @@ Same as above but just by using 2 for loops. In the inner loop calculate sum and
 *Approach 3 :-* <br/>
 TC - $O(N)$
 #### Kadane's Algorithm
+<br/>[Explanation :-] (https://www.youtube.com/watch?v=w_KEocd__20&ab_channel=takeUforward)
+
+``` python
+import sys
+class Solution:
+    ##Complete this function
+    #Function to find the sum of contiguous subarray with maximum sum.
+    def maxSubArraySum(self,arr,N):
+        currSum = 0
+        maxSum = -sys.maxsize -1 #arr[0] # because at least 1 element should be there
+        for i in range(N):
+            currSum += arr[i]
+            if currSum > maxSum:
+                maxSum = currSum
+            if currSum < 0:
+                currSum = 0
+        return maxSum        
+```
