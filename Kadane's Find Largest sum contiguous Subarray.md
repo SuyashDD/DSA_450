@@ -42,7 +42,9 @@ Same as above but just by using 2 for loops. In the inner loop calculate sum and
 *Approach 3 :-* <br/>
 TC - $O(N)$
 #### Kadane's Algorithm
-<br/>[Explanation :-] (https://www.youtube.com/watch?v=w_KEocd__20&ab_channel=takeUforward)
+<br/>[Explanation :-](https://www.youtube.com/watch?v=w_KEocd__20&ab_channel=takeUforward)
+<br/>
+loop over array - calculate currentSum by adding current element. if currSum is negative make it 0. If positive compare with maxSum and update maxSum
 
 ``` python
 import sys
@@ -51,7 +53,7 @@ class Solution:
     #Function to find the sum of contiguous subarray with maximum sum.
     def maxSubArraySum(self,arr,N):
         currSum = 0
-        maxSum = -sys.maxsize -1 #arr[0] # because at least 1 element should be there
+        maxSum = -sys.maxsize -1
         for i in range(N):
             currSum += arr[i]
             if currSum > maxSum:
