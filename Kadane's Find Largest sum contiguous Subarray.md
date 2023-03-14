@@ -2,7 +2,7 @@
 
 
 *Approach 1*
-TC - O(n^3)
+TC - $O(N^3)$
 ``` python
     #Function to find the sum of contiguous subarray with maximum sum.
     def maxSubArraySum(self,arr,N):
